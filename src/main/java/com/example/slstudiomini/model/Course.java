@@ -3,7 +3,7 @@ package com.example.slstudiomini.model;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.hibernate.annotations.SQLRestriction;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -15,7 +15,7 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
-@SQLRestriction("deleted_at IS NULL")
+//@SQLRestriction("deleted_at IS NULL")
 @Table(name = "courses")
 public class Course {
     @Id
@@ -37,10 +37,27 @@ public class Course {
     @Column
     private LocalDateTime deletedAt;
 
+    @Column
+    private String filepath;
+
+    @JsonManagedReference
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
     private List<Lesson> lessons;
 
     public Course() {
+    }
+
+    public Course(Long id, String name, String description, LocalDateTime createdAt,
+                  LocalDateTime updatedAt, LocalDateTime deletedAt, String filepath,
+                  List<Lesson> lessons) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
+        this.deletedAt = deletedAt;
+        this.filepath = filepath;
+        this.lessons = lessons;
     }
 
     public Long getId() {
@@ -97,5 +114,13 @@ public class Course {
 
     public void setDeletedAt(LocalDateTime deletedAt) {
         this.deletedAt = deletedAt;
+    }
+
+    public String getFilepath() {
+        return filepath;
+    }
+
+    public void setFilepath(String filepath) {
+        this.filepath = filepath;
     }
 }

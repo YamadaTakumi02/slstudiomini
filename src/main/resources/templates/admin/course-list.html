@@ -14,6 +14,7 @@
                     <thead>
                         <tr>
                             <th scope="col">#</th>
+                            <th scope="cl">アイコン</th>
                             <th scope="col">コース名</th>
                             <th scope="col">コース説明</th>
                             <th scope="col">操作</th>
@@ -22,10 +23,12 @@
                     <tbody>
                         <tr th:each="course : ${courses}">
                             <th scope="row" th:text="${course.id}"></th>
+                            <td><img th:if="${course.filepath}" th:src="@{'/' + ${course.filepath}}" width="60px"/></td>
                             <td th:text="${course.name}"></td>
                             <td th:text="${course.description}"></td>
                             <td>
                                 <a th:href="@{/admin/courses/edit/{id}(id=${course.id})}">編集</a>
+                                <a th:href="@{/upload/{id}(id=${course.id})}">アイコン設定</a>
                                 <a th:href="@{/admin/courses/delete/{id}(id=${course.id})}">削除</a>
                             </td>
                         </tr>

@@ -1,0 +1,66 @@
+2024-10-01 10:32:13 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-01 10:32:14 [restartedMain] INFO  c.e.s.SlstudiominiApplication - Starting SlstudiominiApplication using Java 21.0.4 with PID 21732 (C:\SLStudio\Spring BootによるWEB開発\Chapter3\Lesson1\slstudiomini-1\bin\main started by user in C:\SLStudio\Spring BootによるWEB開発\Chapter3\Lesson1\slstudiomini-1)
+2024-10-01 10:32:14 [restartedMain] INFO  c.e.s.SlstudiominiApplication - The following 1 profile is active: "dev"
+2024-10-01 10:32:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-01 10:32:14 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-01 10:32:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01 10:32:16 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 4 JPA repository interfaces.
+2024-10-01 10:32:17 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-01 10:32:17 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-01 10:32:17 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-01 10:32:17 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-10-01 10:32:17 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-01 10:32:17 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3614 ms
+2024-10-01 10:32:18 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01 10:32:18 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-10-01 10:32:18 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-01 10:32:18 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01 10:32:18 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-01 10:32:19 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3650f8ed
+2024-10-01 10:32:19 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-01 10:32:20 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01 10:32:21 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01 10:32:21 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01 10:32:21 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2024-10-01 10:32:22 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@40d0504e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57757fd9, org.springframework.security.web.context.SecurityContextHolderFilter@3df5238b, org.springframework.security.web.header.HeaderWriterFilter@919ee31, org.springframework.web.filter.CorsFilter@10bc98f, org.springframework.security.web.csrf.CsrfFilter@36bf7b16, org.springframework.security.web.authentication.logout.LogoutFilter@7a015cc1, com.example.slstudiomini.dev.DevAuthenticationFilter@2e02423f, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@4c8c4125, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@6bced688, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@6c923591, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4067b21d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@585935bf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1065146d, org.springframework.security.web.access.ExceptionTranslationFilter@7912eaa1, org.springframework.security.web.access.intercept.AuthorizationFilter@398de4bc]
+2024-10-01 10:32:22 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-01 10:32:22 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-01 10:32:23 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-10-01 10:32:23 [restartedMain] INFO  c.e.s.SlstudiominiApplication - Started SlstudiominiApplication in 9.919 seconds (process running for 11.353)
+2024-10-01 10:32:28 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-01 10:32:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-01 10:32:28 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-10-01 10:32:38 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource tasks.]
+2024-10-01 11:34:15 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-01 11:34:15 [restartedMain] INFO  c.e.s.SlstudiominiApplication - Starting SlstudiominiApplication using Java 21.0.4 with PID 22228 (C:\SLStudio\Spring BootによるWEB開発\Chapter3\Lesson1\slstudiomini-1\bin\main started by user in C:\SLStudio\Spring BootによるWEB開発\Chapter3\Lesson1\slstudiomini-1)
+2024-10-01 11:34:15 [restartedMain] INFO  c.e.s.SlstudiominiApplication - The following 1 profile is active: "dev"
+2024-10-01 11:34:15 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-10-01 11:34:15 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-10-01 11:34:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-10-01 11:34:17 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 163 ms. Found 4 JPA repository interfaces.
+2024-10-01 11:34:18 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-10-01 11:34:18 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-10-01 11:34:18 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-10-01 11:34:18 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-10-01 11:34:18 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-10-01 11:34:18 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3726 ms
+2024-10-01 11:34:19 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-10-01 11:34:19 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.1.Final
+2024-10-01 11:34:19 [restartedMain] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-10-01 11:34:20 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-10-01 11:34:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-10-01 11:34:20 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@65f6dcec
+2024-10-01 11:34:20 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-10-01 11:34:23 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-10-01 11:34:23 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-10-01 11:34:25 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-10-01 11:34:25 [restartedMain] INFO  o.s.b.a.w.s.WelcomePageHandlerMapping - Adding welcome page template: index
+2024-10-01 11:34:25 [restartedMain] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e1c4867, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@65633b1a, org.springframework.security.web.context.SecurityContextHolderFilter@58aa80e1, org.springframework.security.web.header.HeaderWriterFilter@7e9e51c9, org.springframework.web.filter.CorsFilter@63ac1f4, org.springframework.security.web.csrf.CsrfFilter@220f7da8, org.springframework.security.web.authentication.logout.LogoutFilter@1fe04532, com.example.slstudiomini.dev.DevAuthenticationFilter@5f6057cd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@72de384a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@38bd4d3c, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@63837336, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3fda538a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3cc3bbb6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1fc43fb7, org.springframework.security.web.access.ExceptionTranslationFilter@1ed9dbd9, org.springframework.security.web.access.intercept.AuthorizationFilter@125e2c9e]
+2024-10-01 11:34:26 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2024-10-01 11:34:26 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-10-01 11:34:27 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-10-01 11:34:27 [restartedMain] INFO  c.e.s.SlstudiominiApplication - Started SlstudiominiApplication in 13.06 seconds (process running for 14.399)
+2024-10-01 11:34:38 [http-nio-8080-exec-4] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-10-01 11:34:38 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-10-01 11:34:38 [http-nio-8080-exec-4] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-10-01 11:34:38 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource admin/lesson-list.]

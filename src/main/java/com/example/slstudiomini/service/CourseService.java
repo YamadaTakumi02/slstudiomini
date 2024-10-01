@@ -9,21 +9,76 @@ import org.springframework.stereotype.Service;
 import com.example.slstudiomini.model.Course;
 import com.example.slstudiomini.repository.CourseRepository;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityNotFoundException;
+import jakarta.persistence.NoResultException;
+import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import jakarta.transaction.Transactional;
 
 @Service
 public class CourseService {
+    
+    @PersistenceContext
+    private EntityManager entityManager;
+
     @Autowired
     private CourseRepository courseRepository;
 
     public List<Course> findAllCourses() {
-        return courseRepository.findAll();
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Course> cq = cb.createQuery(Course.class);
+        Root<Course> course = cq.from(Course.class);
+        // クエリをビルドして全件取得
+        cq.select(course)
+        .where(cb.isNull(course.get("deletedAt")));
+    
+        // 実行する
+        try {
+            return entityManager.createQuery(cq).getResultList(); // getSingleResult()ではなくgetResultList()を使用
+        } catch (NoResultException e) {
+            throw new EntityNotFoundException("No courses found"); // メッセージを変更
+        }
     }
 
+    // public List<Course> findAllCourses() {
+    //     return courseRepository.findAll();
+    // }
+
+    // public Course findCourseById(Long id) {
+    //     return courseRepository.findById(id)
+    //         .orElseThrow(() -> new EntityNotFoundException("Course Not Found With id = " + id));
+    // }
+
+    //画像ファイル名をCoures fileNameカラムに保存
+    public Course fileUploadCouse(Long id, String fileName) {
+        Course course = findCourseById(id);
+        course.setFilepath(fileName);
+        return courseRepository.save(course);
+    }
+
+
     public Course findCourseById(Long id) {
-        return courseRepository.findById(id)
-            .orElseThrow(() -> new EntityNotFoundException("Course Not Found With id = " + id));
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<Course> cq = cb.createQuery(Course.class);
+        Root<Course> course = cq.from(Course.class);
+		
+        // ここからクエリをビルドする
+        cq.select(course).where(
+        cb.and(
+            cb.equal(course.get("id"), id),
+            cb.isNull(course.get("deletedAt"))
+        )
+        );
+		
+        // 実行する
+        try {
+        return entityManager.createQuery(cq).getSingleResult();
+            } catch (NoResultException e) {
+        throw new EntityNotFoundException("Course with id " + id + " not found");
+        }
     }
 
     @Transactional

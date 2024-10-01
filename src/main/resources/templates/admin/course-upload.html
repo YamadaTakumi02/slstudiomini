@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org"
+        th:replace="~{layout/admin/base :: layout(~{::title},~{::body/content()})}">
+<head>
+    <meta charset="UTF-8">
+    <title>SLStudio Mini 管理画面</title>
+</head>
+<body>
+    <h1>コース/アイコン設定</h1><br>
+    <div class="container-fluid">
+        <div class="row mb-3">
+            <div class="col align-self-center">
+                <form th:action="@{/upload/{id}(id=${course.id})}" th:method="post" th:object="${course}" enctype="multipart/form-data">
+                    <input type="hidden" th:field="*{id}">
+                        <input type="file" name="file" />
+                        <input type="submit" value="アップロード" />
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
